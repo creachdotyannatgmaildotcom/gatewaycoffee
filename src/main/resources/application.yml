@@ -3,6 +3,12 @@ spring:
     name: gatewaycoffee
   config:
     import: 'configserver:http://localhost:8071'
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
 
 management:
   endpoints:
@@ -13,7 +19,7 @@ management:
     env:
       enabled: true
   endpoint:
-    shutdown:
+    gateway:
       access: unrestricted
 
 
