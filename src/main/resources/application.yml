@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: gatewaycoffee
+  config:
+    import: 'configserver:http://localhost:8071'
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+  endpoint:
+    shutdown:
+      access: unrestricted
+
+
+ 
+info:
+  app:
+    name: "gatewaycoffee"
+    description: "Coffee Gateway"
+    version: "2.0"
