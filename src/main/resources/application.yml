@@ -21,7 +21,9 @@ management:
   endpoint:
     gateway:
       access: unrestricted
-
+    health:
+      probes:
+        enabled: true
 
  
 info:
